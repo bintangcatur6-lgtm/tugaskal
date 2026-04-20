@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Tugas Determinan dan Invers Matriks</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Tugas Determinan & Invers Matriks</h1>
+
+<h2>A. Determinan Matriks</h2>
+
+<h3>1. Matriks 2x2</h3>
+<pre>
+A = | -7  -5 |
+    |  1   4 |
+</pre>
+
+<p><b>Penjelasan:</b></p>
+<p>Untuk matriks 2x2, determinan dihitung dengan rumus:</p>
+<pre>det(A) = (a × d) - (b × c)</pre>
+
+<p>Dimana:</p>
+<ul>
+<li>a = -7</li>
+<li>b = -5</li>
+<li>c = 1</li>
+<li>d = 4</li>
+</ul>
+
+<p><b>Langkah perhitungan:</b></p>
+<pre>
+det(A) = (-7 × 4) - (-5 × 1)
+       = -28 - (-5)
+       = -28 + 5
+       = -23
+</pre>
+
+<p><b>Kesimpulan:</b> Determinan matriks adalah -23</p>
+
+<hr>
+
+<h3>2. Matriks 3x3</h3>
+<pre>
+A = | 0  2  -3 |
+    | 1 -2  -1 |
+    | 0  0   1 |
+</pre>
+
+<p><b>Penjelasan:</b></p>
+<p>Matriks ini merupakan matriks segitiga atas karena semua elemen di bawah diagonal utama bernilai 0.</p>
+
+<p>Rumus determinan untuk matriks segitiga:</p>
+<pre>det(A) = hasil perkalian elemen diagonal utama</pre>
+
+<p><b>Langkah perhitungan:</b></p>
+<pre>
+det(A) = 0 × (-2) × 1
+       = 0
+</pre>
+
+<p><b>Kesimpulan:</b> Determinan matriks adalah 0</p>
+
+<hr>
+
+<h3>3. Matriks 4x4</h3>
+<pre>
+A =
+|  1  -3   1   1 |
+| -3   1   1   1 |
+|  1   1  -3   1 |
+|  1   1   1  -3 |
+</pre>
+
+<p><b>Penjelasan:</b></p>
+<p>Untuk matriks ukuran 4x4, determinan bisa dihitung dengan ekspansi baris atau eliminasi baris.</p>
+
+<p>Dengan metode eliminasi, kita mengubah matriks menjadi bentuk segitiga. Setelah dilakukan operasi baris elementer, ditemukan bahwa terdapat baris yang saling bergantung (tidak independen).</p>
+
+<p>Artinya matriks bersifat singular.</p>
+
+<p><b>Kesimpulan:</b></p>
+<pre>det(A) = 0</pre>
+
+<hr>
+
+<h2>B. Invers Matriks</h2>
+
+<p><b>Penjelasan:</b></p>
+<p>Invers matriks hanya bisa dihitung jika determinan ≠ 0.</p>
+
+<p>Rumus umum:</p>
+<pre>
+A⁻¹ = 1/det(A) × adj(A)
+</pre>
+
+<hr>
+
+<h3>4. Matriks 2x2</h3>
+<pre>
+A = | -7  -5 |
+    |  1   4 |
+</pre>
+
+<p><b>Langkah 1: Hitung determinan</b></p>
+<pre>
+det(A) = (-7 × 4) - (-5 × 1)
+       = -23
+</pre>
+
+<p><b>Langkah 2: Gunakan rumus invers 2x2</b></p>
+<pre>
+A⁻¹ = 1/(ad - bc) × | d  -b |
+                   | -c  a |
+</pre>
+
+<p><b>Substitusi nilai:</b></p>
+<pre>
+A⁻¹ = 1/(-23) × | 4   5 |
+                | -1 -7 |
+</pre>
+
+<p><b>Hasil akhir:</b></p>
+<pre>
+| -4/23  -5/23 |
+|  1/23   7/23 |
+</pre>
+
+<p><b>Kesimpulan:</b> Matriks memiliki invers karena determinan ≠ 0</p>
+
+<hr>
+
+<h3>5. Matriks 3x3</h3>
+<pre>
+A = | 0  2  -3 |
+    | 1 -2  -1 |
+    | 0  0   1 |
+</pre>
+
+<p><b>Penjelasan:</b></p>
+<p>Determinannya sudah dihitung sebelumnya yaitu 0.</p>
+
+<p>Karena det(A) = 0, maka:</p>
+<ul>
+<li>Matriks tidak memiliki invers</li>
+<li>Matriks disebut matriks singular</li>
+</ul>
+
+<hr>
+
+<h3>6. Matriks 4x4</h3>
+<pre>
+A =
+|  1  -3   1   1 |
+| -3   1   1   1 |
+|  1   1  -3   1 |
+|  1   1   1  -3 |
+</pre>
+
+<p><b>Penjelasan:</b></p>
+<p>Determinannya = 0, sehingga matriks juga singular.</p>
+
+<p><b>Kesimpulan:</b></p>
+<ul>
+<li>Tidak memiliki invers</li>
+</ul>
+
+<hr>
+
+<h2>Kesimpulan Akhir</h2>
+<ul>
+<li>Determinan digunakan untuk menentukan apakah matriks memiliki invers</li>
+<li>Jika det(A) ≠ 0 → matriks punya invers</li>
+<li>Jika det(A) = 0 → matriks tidak punya invers</li>
+</ul>
+
+</body>
+</html>
